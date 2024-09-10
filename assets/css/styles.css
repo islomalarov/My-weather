@@ -124,7 +124,6 @@ body {
 }
 .tabs__content-btn {
   background-color: inherit;
-  color: aliceblue;
   font-weight: 700;
   font-size: 20px;
   padding: 10px 20px;
@@ -167,7 +166,7 @@ main {
 .weather__section {
   background-color: #fffafa;
   padding: 20px;
-  margin: 20px 0 0 0;
+  margin: 20px 0 0;
 }
 .weather__current {
   display: grid;

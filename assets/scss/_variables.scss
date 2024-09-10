@@ -1,9 +1,17 @@
-//COLORS 
-$title-color: #22bc6f;
-$section-color: #c4c1b9;
-$fonts-color: #7a7878;
-$block-color: #fffafa;
-
+//COLORS
+$title-color: #3043b1;
+$section-color:/*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=cbdcd5&c2=1556e7&gt=l&gd=dtl
+*/ #cbdcd5
+  linear-gradient(135deg, #cbdcd5, #1556e7);
+$fonts-color: #241d1d;
+$block-color: linear-gradient(
+  90deg,
+  rgba(2, 0, 36, 1) 0%,
+  rgba(121, 73, 9, 0.4150035014005602) 35%,
+  rgba(0, 212, 255, 1) 100%
+);
 
 // FONTS
 // font-family
@@ -11,13 +19,12 @@ $global-font: 'Roboto';
 
 // font-size
 
-
 // CONTAINER
 $max-width: 1024px;
 
 // media-containers
 $screens: (
-    laptop: 1024px,
-    tablet: 768px,
-    phone: 425px
+  laptop: 1024px,
+  tablet: 768px,
+  phone: 425px,
 );

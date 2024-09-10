@@ -1,6 +1,5 @@
 import { hidden } from "./hidden.js";
-
-const API_KEY = '69151ddc14e90d97cd654a5d8d86eab1';
+import { API_KEY } from './config.js';
 
 async function fetchData(url) {
     try {

@@ -17,9 +17,9 @@ export function getTime(times, timezoneOffset) {
 export function getDuration(sunrise, sunset) {
   let duration = sunset - sunrise;
   let hours = Math.floor(duration / 3600);
-  let minuts = Math.floor((duration - 3600 * hours) / 60);
+  let minutes = Math.floor((duration - 3600 * hours) / 60);
 
-  return `${hours <= 9 ? '0' + hours : hours}:${minuts <= 9 ? '0' + minuts : minuts} hr`;
+  return `${hours <= 9 ? '0' + hours : hours}:${minutes <= 9 ? '0' + minutes : minutes} hr`;
 }
 
 export function getWeak(length, dt) {

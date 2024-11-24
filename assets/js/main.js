@@ -23,6 +23,6 @@ searchForm.addEventListener('submit', async (e) => {
     await forecast(cityName);
     addTable('#weather5day', '.weather__5day-forecast-days', 'active', '#forecastHourly', cityName);
   } else {
-    alert('Введите название города');
+    alert('Enter the city name');
   }
 });

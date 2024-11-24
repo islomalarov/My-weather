@@ -13,25 +13,26 @@ export async function forecast(cityName) {
       temp: { day, night },
     } = elem;
 
-    const div = document.createElement('div');
-    div.className = 'weather__5day-forecast-days';
+    const weatherDays = document.createElement('div');
     const weatherDayTitle = document.createElement('h3');
-    weatherDayTitle.className = 'weather__5day-day title';
     const weatherDate = document.createElement('span');
-    weatherDate.className = 'weather__5day-date';
     const weatherIcon = document.createElement('img');
-    weatherIcon.className = 'weather__5day-icon';
     const weatherTemp = document.createElement('span');
+    const weatherDescription = document.createElement('span');
+
+    weatherDays.className = 'weather__5day-forecast-days';
+    weatherDayTitle.className = 'weather__5day-day title';
+    weatherDate.className = 'weather__5day-date';
+    weatherIcon.className = 'weather__5day-icon';
     weatherTemp.className = 'weather__5day-temp';
-    const weatherDescr = document.createElement('span');
-    weatherDescr.className = 'weather__5day-descr';
+    weatherDescription.className = 'weather__5day-description';
 
     weatherDayTitle.textContent = getWeak('short', dt);
     weatherDate.textContent = getMonth('short', dt);
     weatherIcon.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
     weatherTemp.textContent = `${Math.round(day)}°/ ${Math.round(night)}°`;
-    weatherDescr.textContent = main;
-    div.append(weatherDayTitle, weatherDate, weatherIcon, weatherTemp, weatherDescr);
-    block.append(div);
+    weatherDescription.textContent = main;
+    weatherDays.append(weatherDayTitle, weatherDate, weatherIcon, weatherTemp, weatherDescription);
+    block.append(weatherDays);
   });
 }

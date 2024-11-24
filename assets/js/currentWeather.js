@@ -11,7 +11,7 @@ export async function renderCurrentWeather(cityName) {
   const sunriseEl = document.querySelector('#sunrise');
   const sunsetEl = document.querySelector('#sunset');
   const durationEl = document.querySelector('#duration');
-  const currentWeatherDescrEl = document.querySelector('#currentWeatherDescr');
+  const currentWeatherDescriptionEl = document.querySelector('#currentWeatherDescription');
   const currentTempEl = document.querySelector('#currentTemp');
   const feelsLikeTempEl = document.querySelector('#feelsLike');
   const currentWeatherIconEl = document.querySelector('#currentWeatherIcon');
@@ -22,7 +22,7 @@ export async function renderCurrentWeather(cityName) {
   sunsetEl.textContent = getTime(sunset, timezone_offset);
   durationEl.textContent = getDuration(sunrise, sunset);
   currentWeatherIconEl.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
-  currentWeatherDescrEl.textContent = main;
+  currentWeatherDescriptionEl.textContent = main;
   currentTempEl.textContent = `${Math.round(temp)}°C`;
   feelsLikeTempEl.textContent = `Real Feel ${Math.round(feels_like)}°`;
 }

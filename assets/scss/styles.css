@@ -172,7 +172,7 @@ main {
 .weather__current-icon-img {
   padding: 10px;
 }
-.weather__current-icon-descr {
+.weather__current-icon-description {
   color: #241d1d;
 }
 .weather__current-temp {
@@ -182,7 +182,7 @@ main {
   flex-direction: column;
   text-align: center;
 }
-.weather__current-temp-curr {
+.weather__current-temp-current {
   font-size: 40px;
 }
 .weather__current-temp-feel {
@@ -224,7 +224,7 @@ main {
 .weather__5day-temp {
   font-size: 20px;
 }
-.weather__5day-descr {
+.weather__5day-description {
   color: #241d1d;
   padding: 10px;
   font-size: 20px;

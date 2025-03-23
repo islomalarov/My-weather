@@ -2,10 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./assets/scss/styles.css" />
     <title>My Weather</title>
   </head>
 
@@ -18,7 +15,7 @@
             <div class="header__form-search">
               <input type="text" class="header__form-input" id="cityInput" />
               <button type="submit" class="header__form-button" id="searchBtn">
-                <i class="bx bx-search"></i>
+                <i data-lucide="search"></i>
               </button>
             </div>
           </form>
@@ -93,6 +90,10 @@
       </section>
     </main>
 
-    <script src="./assets/js/main.js" type="module"></script>
+    <script type="module" src="/src/js/main.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
   </body>
 </html>

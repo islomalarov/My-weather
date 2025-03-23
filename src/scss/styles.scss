@@ -1,0 +1,243 @@
+@use 'resets';
+@use 'variables' as *;
+@use 'setup';
+@use 'mixins' as mix;
+
+.header {
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+
+  &__form {
+    &-search {
+      width: 300px;
+      display: flex;
+      align-items: center;
+      border-radius: 40px;
+      border: 1px solid gray;
+      overflow: hidden;
+    }
+
+    &-input {
+      padding: 10px;
+      color: $fonts-color;
+      font-size: 18px;
+    }
+
+    &-button {
+      background-color: white;
+      color: gray;
+      display: flex;
+      flex: 1;
+      cursor: pointer;
+    }
+  }
+}
+
+.title {
+  color: $title-color;
+  font-weight: 700;
+}
+
+.tabs {
+  background-color: #171313;
+
+  &__content {
+    display: flex;
+    height: 50px;
+
+    &-btn {
+      background-color: inherit;
+      color: aliceblue;
+      font-weight: 700;
+      font-size: 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+      height: 100%;
+      transform: translate(-1px, -1px);
+      color: #fff;
+      transition: 0.3s;
+
+      &.active {
+        border-bottom: 4px solid $title-color;
+        transform: translate(0, 0);
+        box-shadow: inset 0px 0px 1px rgb(225, 226, 229);
+      }
+    }
+  }
+}
+
+main {
+  background: $section-color;
+}
+
+.weather {
+  height: 100vh;
+  &__tabs {
+    display: none;
+    flex-direction: column;
+    height: 100vh;
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__section {
+    background-color: $block-color;
+    padding: 20px;
+    margin: 20px 0 0 0;
+  }
+
+  &__current {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    gap: 10px;
+
+    &-title {
+      grid-column: span 4;
+    }
+
+    &-timezone {
+      grid-column: 6 / 8;
+      text-align: center;
+    }
+
+    &-date {
+      grid-column: 10 / -1;
+      display: flex;
+      justify-content: flex-end;
+      color: $title-color;
+      font-weight: 700;
+    }
+
+    &-icon {
+      grid-column: 2 / 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &-img {
+        padding: 10px;
+      }
+
+      &-description {
+        color: $fonts-color;
+      }
+    }
+
+    &-temp {
+      grid-column: 6 / 8;
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+      text-align: center;
+
+      &-current {
+        font-size: 40px;
+      }
+
+      &-feel {
+        font-size: 14px;
+        color: $fonts-color;
+      }
+    }
+
+    &-day {
+      grid-column: 10 / span 2;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      color: $fonts-color;
+    }
+  }
+
+  &__5day {
+    &-forecast {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      margin-top: 20px;
+
+      &-days {
+        display: grid;
+        gap: 10px;
+        justify-items: center;
+        cursor: pointer;
+        background-color: $block-color;
+        border: 1px solid rgb(199, 197, 195);
+
+        &.active {
+          background-color: #ada0a05b;
+        }
+      }
+    }
+
+    &-day {
+      padding: 10px;
+    }
+
+    &-date {
+      color: $fonts-color;
+    }
+
+    &-icon {
+      width: 50%;
+    }
+
+    &-temp {
+      font-size: 20px;
+    }
+
+    &-description {
+      color: $fonts-color;
+      padding: 10px;
+      font-size: 20px;
+    }
+  }
+}
+
+table {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+th,
+td {
+  padding: 20px;
+}
+
+th {
+  text-align: left;
+  color: $fonts-color;
+}
+
+.error {
+  height: 100vh;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+
+  &__block {
+    background-color: $block-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $fonts-color;
+    font-weight: 700;
+    padding: 30px 50px;
+
+    &-number {
+      font-size: 80px;
+      padding-bottom: 40px;
+    }
+
+    &-text {
+      font-size: 40px;
+    }
+  }
+}

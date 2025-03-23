@@ -1,0 +1,13 @@
+@use 'variables' as *;
+
+body {
+  font-family: $global-font;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 15px;
+}
